@@ -11,8 +11,7 @@ else
     git clone https://github.com/facebook/rocksdb/
     cd rocksdb
     git checkout tags/rocksdb-${VERSION}
-    PORTABLE=1 make shared_lib
-    sudo make uninstall
+    PORTABLE=1 DEBUG_LEVEL=1 make librocksdb.so
     sudo make install-shared
     sudo ldconfig
 fi
